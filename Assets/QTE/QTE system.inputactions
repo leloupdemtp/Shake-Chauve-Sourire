@@ -1,0 +1,115 @@
+{
+    "version": 1,
+    "name": "QTE system",
+    "maps": [
+        {
+            "name": "QTE",
+            "id": "eda280e4-67d3-4ee1-b11d-8769b0b4bbd5",
+            "actions": [
+                {
+                    "name": "Validé",
+                    "type": "Button",
+                    "id": "0e0b91ae-06f3-46c2-8f92-8473beef4af4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Gachette haute droite",
+                    "type": "Button",
+                    "id": "9d044299-a577-46c4-82f4-acbed3a1cf50",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Gachette haute gauche",
+                    "type": "Button",
+                    "id": "1f8f7767-0288-499f-bad9-d67edb4d9596",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Gachette basse gauche",
+                    "type": "Button",
+                    "id": "db7d6a87-7ca9-4e5c-99a9-bd8da87611d8",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Gachette basse Droite",
+                    "type": "Button",
+                    "id": "a4a32c08-e24b-43b1-98ff-bd5984513a6a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "525c290b-bb9d-4614-832c-c2376f8ec23c",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Validé",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2c5f7abc-b1cc-4f11-bbb5-5b3a1cd28c74",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gachette haute droite",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e2a51bbf-8c88-4ca8-9080-bd1129017e67",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gachette haute gauche",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5354683d-dd0a-4fde-9ddf-8cda0fcd9552",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gachette basse gauche",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0a932bf1-c36b-44fb-8ed5-ffc09c9e29ae",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gachette basse Droite",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

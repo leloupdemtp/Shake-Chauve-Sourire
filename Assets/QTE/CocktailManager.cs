@@ -41,7 +41,7 @@ public class CocktailManager : MonoBehaviour
     
     private void OnStartCocktailInput(InputAction.CallbackContext context)
     {
-        if (canStartNewCocktail && !isProcessingCocktail)
+        if (canStartNewCocktail && !isProcessingCocktail && context.performed )
         {
             StartCocktail();
         }

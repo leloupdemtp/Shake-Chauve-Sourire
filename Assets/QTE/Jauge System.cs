@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -47,7 +48,7 @@ public class GaugeSystem : MonoBehaviour
         CheckLose();
     }
 
-    // =========================
+
     public void StartGauge()
     {
         ResetGauge();
@@ -100,7 +101,7 @@ public class GaugeSystem : MonoBehaviour
         currentValue = Mathf.Clamp(currentValue - amount, 0f, 100f);
     }
 
-    // =========================
+   
     private void Win()
     {
         finished = true;
@@ -136,5 +137,10 @@ public class GaugeSystem : MonoBehaviour
     {
         if (gaugeFill != null)
             gaugeFill.fillAmount = currentValue / 100f;
+    }
+
+    public void Reset()
+    {
+        currentValue = 20f;
     }
 }

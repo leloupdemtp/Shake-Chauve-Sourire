@@ -81,8 +81,11 @@ public class QTESystem : MonoBehaviour
             {
                 success = true;
                 onGoodInput.Invoke();
+                Gamepad.current.SetMotorSpeeds(1,1);
             }
-
+            
+            Gamepad.current.SetMotorSpeeds(0,0);
+            
             step.inputAction.action.performed += OnCorrect;
 
             float timer = 0f;

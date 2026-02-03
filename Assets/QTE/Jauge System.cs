@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -16,6 +15,7 @@ public class GaugeSystem : MonoBehaviour
     [Header("Target Zone (%)")]
     public float targetMin = 80f;
     public float targetMax = 90f;
+    public float maxZone = 100f;
 
     [Header("Timer")]
     public float timeToMaintain = 3f;
@@ -74,20 +74,29 @@ public class GaugeSystem : MonoBehaviour
     {
         if (currentValue >= targetMin && currentValue <= targetMax)
         {
+            gaugeFill.color = Color.green;
             currentTimer += Time.deltaTime;
             if (currentTimer >= timeToMaintain)
                 Win();
         }
         else
         {
+            gaugeFill.color = Color.white;
             currentTimer = 0f;
         }
     }
 
     private void CheckLose()
     {
-        if (currentValue <= 0 || currentValue >= 100)
+        if (currentValue <= 0)
+        {
             Lose();
+        }
+          
+        if (currentValue > maxZone)
+        {
+            Lose();
+        }
     }
 
     public void AddPoints(float amount)

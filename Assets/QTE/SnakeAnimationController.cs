@@ -8,6 +8,8 @@ public class SnakeAnimationController : MonoBehaviour
     [Header("Animation Triggers")]
     public string shakeAnimationTrigger = "Shake";
     public string idleAnimationTrigger = "Idle";
+    public string goodCocktailTrigger;
+    public string badCocktailTrigger;
     
     [Header("Shake Settings")]
     public float shakeDuration = 1.5f;
@@ -53,6 +55,22 @@ public class SnakeAnimationController : MonoBehaviour
         if (snakeAnimator != null && !isShaking)
         {
             snakeAnimator.SetTrigger(idleAnimationTrigger);
+        }
+    }
+
+    public void PlayGoodCocktailAnim()
+    {
+        if (snakeAnimator != null && !isShaking)
+        {
+            snakeAnimator.SetTrigger(goodCocktailTrigger);
+        }
+    }
+
+    public void PlayBadCocktailAnim()
+    {
+        if (snakeAnimator != null && !isShaking)
+        {
+            snakeAnimator.SetTrigger(badCocktailTrigger);
         }
     }
     

@@ -95,12 +95,15 @@ public class QTESystem : MonoBehaviour
                 if (success || failed)
                     break;
 
-                if (Keyboard.current.anyKey.wasPressedThisFrame && !success)
+                foreach (var actionRef in randomActionPool)
                 {
-                    failed = true;
-                    onBadInput.Invoke();
+                    if (actionRef != step.inputAction && actionRef.action.WasPressedThisFrame())
+                    {
+                        failed = true;
+                        onBadInput.Invoke();
+                    }
                 }
-
+                
                 timer += Time.deltaTime;
                 yield return null;
             }
